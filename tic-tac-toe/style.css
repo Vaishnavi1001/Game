@@ -66,3 +66,10 @@ body{
 .hide{
     display: none;
 }
+.x {
+    color: #b0413e; /* Red for X */
+}
+
+.o {
+    color: #bf2295; /* Blue for O */
+}
