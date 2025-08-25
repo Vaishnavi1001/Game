@@ -9,6 +9,31 @@ h1{
     height: 5rem;
     line-height: 5rem;
 }
+.nav-contain{
+    position: relative;
+}
+.toggle-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+button#mode {
+    background-color: transparent;
+    color: white;
+    border: none;
+    margin-top: 1rem;
+}
+ .dark{
+    background-color: black;
+    color: white;
+  }
+  .light{
+    background-color: white;
+    color: black;
+  }
 .choice{
     height: 165px;
     width:165px;
@@ -57,4 +82,22 @@ img{
     display: inline;
     padding: 1rem;
     border-radius: 1rem;
+}
+
+.reset-container {
+    margin-top: 2rem;
+}
+
+#reset-btn {
+    background-color: #081b31;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+#reset-btn:hover {
+    background-color: #0a2a4d;
 }

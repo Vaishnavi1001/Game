@@ -7,6 +7,13 @@ const msg = document.querySelector("#msg");
 const userScorePara = document.querySelector("#user-score");
 const compScorePara = document.querySelector("#comp-score");
 
+const resetBtn = document.querySelector("#reset-btn");
+
+let modeBtn = document.querySelector("#mode");
+let body = document.querySelector("body");
+let currMode = "light";
+
+
 const genCompChoice = () => {
     const options = ["rock", "paper", "scissor"];
     const randIdx = Math.floor(Math.random() * 3);
@@ -61,10 +68,33 @@ const playGame = (userChoice) => {
     }
 };
 
+resetBtn.addEventListener("click", () => {
+    userScore = 0;
+    compScore = 0;
+    userScorePara.innerText = userScore;
+    compScorePara.innerText = compScore;
+    msg.innerText = "Game Reset! Play again.";
+    msg.style.backgroundColor = "#081b31";
+});
+
 choices.forEach((choice) => {
     console.log(choice);
     choice.addEventListener("click", () => {
         const userChoice = choice.getAttribute("id");
         playGame(userChoice);
     })
-})
+});
+modeBtn.addEventListener("click", () =>{
+    if(currMode === "light"){
+        currMode = "dark";
+        body.classList.add("dark");
+        body.classList.remove("light");
+
+    }
+    else{
+        currMode = "light";
+        body.classList.add("light");
+         body.classList.remove("dark");
+    }
+    console.log(currMode);
+});

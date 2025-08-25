@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROCK PAPER SCISSORS</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div class="nav-contain">
     <h1>ROCK PAPER SCISSORS</h1>
+    <div class="toggle-btn">
+    <button id="mode">Change Mode</button>
+</div>
+</div>
     <div class="choices">
         <div class="choice" id="rock">
             <img src="./Images/rock.png" alt="">
@@ -34,6 +41,13 @@
     <div class="msg-container">
         <p id="msg">Play Your Move</p>
     </div>
+
+    <!-- reset button -->
+    <div class="reset-container">
+        <button id="reset-btn">Reset Game</button>
+    </div>
+
     <script src="app.js"></script>
 </body>
+
 </html>
